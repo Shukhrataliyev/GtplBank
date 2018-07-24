@@ -1,0 +1,205 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 24 17:14:36 CDT 2018</td>
+</tr>
+<tr><td>Total time:</td><td>70 seconds (70238 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.guru99.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.guru99.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify customer id", "Edit customer"<br/>
+<a href="#Output-1011104118" onClick='toggleBox("Output-1011104118", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1011104118" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1011104118">
+<div "result">I logged in to my bank account (PASSED : 10s)</div><br/>
+<div "result">I am on edit customer page (PASSED : 0s)</div><br/>
+<div "result">I  enter &quot;1234Acc&quot; value in customer id field (PASSED : 0s)</div><br/>
+<div "result">I press tab and move to next field (PASSED : 0s)</div><br/>
+<div "result">Error message &quot;Characters are not allowed&quot; for id should be displayed (FAILED : 0s)</div><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [Characters are not allowed] but found []
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.guru99.step_definitions.EditCustomerStepDefs.error_message_for_id_should_be_displayed(EditCustomerStepDefs.java:42)
+	at ?.Error message &quot;Characters are not allowed&quot; for id should be displayed(src/test/resources/com/guru99/features/EditCustomer.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1011104118", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1011104118'><pre>java.lang.AssertionError: expected [Characters are not allowed] but found []
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.guru99.step_definitions.EditCustomerStepDefs.error_message_for_id_should_be_displayed(EditCustomerStepDefs.java:42)
+	at ?.Error message &quot;Characters are not allowed&quot; for id should be displayed(src/test/resources/com/guru99/features/EditCustomer.feature:13)
+</pre></div></td>
+<td>12</td>
+<td>com.guru99.runners.CukesRunner@e45f292</td></tr>
+<tr>
+<td title='com.guru99.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.guru99.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify customer id", "Edit customer"<br/>
+<a href="#Output-778806426" onClick='toggleBox("Output-778806426", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-778806426" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-778806426">
+<div "result">I logged in to my bank account (PASSED : 11s)</div><br/>
+<div "result">I am on edit customer page (PASSED : 0s)</div><br/>
+<div "result">I  enter &quot;Acc123&quot; value in customer id field (PASSED : 0s)</div><br/>
+<div "result">I press tab and move to next field (PASSED : 0s)</div><br/>
+<div "result">Error message &quot;Characters are not allowed&quot; for id should be displayed (FAILED : 0s)</div><br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [Characters are not allowed] but found []
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.guru99.step_definitions.EditCustomerStepDefs.error_message_for_id_should_be_displayed(EditCustomerStepDefs.java:42)
+	at ?.Error message &quot;Characters are not allowed&quot; for id should be displayed(src/test/resources/com/guru99/features/EditCustomer.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace778806426", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace778806426'><pre>java.lang.AssertionError: expected [Characters are not allowed] but found []
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.guru99.step_definitions.EditCustomerStepDefs.error_message_for_id_should_be_displayed(EditCustomerStepDefs.java:42)
+	at ?.Error message &quot;Characters are not allowed&quot; for id should be displayed(src/test/resources/com/guru99/features/EditCustomer.feature:13)
+</pre></div></td>
+<td>12</td>
+<td>com.guru99.runners.CukesRunner@e45f292</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.guru99.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.guru99.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify customer id", "Edit customer"<br/>
+<a href="#Output-1447685190" onClick='toggleBox("Output-1447685190", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1447685190" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1447685190">
+<div "result">I logged in to my bank account (PASSED : 11s)</div><br/>
+<div "result">I am on edit customer page (PASSED : 0s)</div><br/>
+<div "result">I  enter &quot;empty&quot; value in customer id field (PASSED : 0s)</div><br/>
+<div "result">I press tab and move to next field (PASSED : 0s)</div><br/>
+<div "result">Error message &quot;Customer ID is required&quot; for id should be displayed (PASSED : 0s)</div><br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>com.guru99.runners.CukesRunner@e45f292</td></tr>
+<tr>
+<td title='com.guru99.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.guru99.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify customer id", "Edit customer"<br/>
+<a href="#Output-1323514615" onClick='toggleBox("Output-1323514615", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1323514615" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1323514615">
+<div "result">I logged in to my bank account (PASSED : 10s)</div><br/>
+<div "result">I am on edit customer page (PASSED : 0s)</div><br/>
+<div "result">I  enter &quot;name!@&quot; value in customer id field (PASSED : 0s)</div><br/>
+<div "result">I press tab and move to next field (PASSED : 0s)</div><br/>
+<div "result">Error message &quot;Special characters are not allowed&quot; for id should be displayed (PASSED : 0s)</div><br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>com.guru99.runners.CukesRunner@e45f292</td></tr>
+<tr>
+<td title='com.guru99.runners.CukesRunner.runScenario()'><b>runScenario</b><br>Test class: com.guru99.runners.CukesRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify customer id", "Edit customer"<br/>
+<a href="#Output-1795468466" onClick='toggleBox("Output-1795468466", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1795468466" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1795468466">
+<div "result">I logged in to my bank account (PASSED : 11s)</div><br/>
+<div "result">I am on edit customer page (PASSED : 0s)</div><br/>
+<div "result">I  enter &quot;!@&quot; value in customer id field (PASSED : 0s)</div><br/>
+<div "result">I press tab and move to next field (PASSED : 0s)</div><br/>
+<div "result">Error message &quot;Special characters are not allowed&quot; for id should be displayed (PASSED : 0s)</div><br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>com.guru99.runners.CukesRunner@e45f292</td></tr>
+</table><p>
+</body>
+</html>
